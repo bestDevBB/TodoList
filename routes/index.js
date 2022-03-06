@@ -7,7 +7,6 @@ const newRouter = require('/new');
 router.use('/new', newRouter); */
 
 const express = require('express');
-const app = express();
 const router = express.Router();
 
 // Todo Router

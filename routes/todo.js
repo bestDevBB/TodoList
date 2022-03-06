@@ -1,7 +1,6 @@
 "use strict";
 
 const express = require('express');
-const app = express();
 const router = express.Router();
 
 const ctrl = require('../controllers/todo.js');
