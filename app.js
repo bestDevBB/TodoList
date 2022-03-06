@@ -3,14 +3,11 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const { sequelize }  = require('./models/index.js');
-// const path = require('path');
 const bodyParser = require('body-parser');
 const router = require('./routes/index.js');
 
 const app = express();
 dotenv.config();
-
-const PORT = process.env.PORT || 3000;
 
 // DB Connection
 sequelize.sync({ force: false })
@@ -34,7 +31,4 @@ app.use(bodyParser.json());
 // router setting
 app.use(router);
 
-// 서버 실행 - bin 폴더 만들어서 따로 분리할 것!
-app.listen(PORT, () => {
-    console.log(`${PORT}번 포트에서 서버 실행 중...`);
-});
+module.exports = app;
