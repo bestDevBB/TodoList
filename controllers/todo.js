@@ -14,29 +14,11 @@ const output = {
         });
         res.render('todo.ejs', { todoTasks: tasks });
         // res.send(tasks);
+        // 브라우저에서 DB 목록 json 형태로 보여짐. 공부할 때 써먹기!
     },
 
     // 등록
     write: async (req, res) => {
-    // write: (req, res) => {
-        // build()와 save() 사용하는 방식!!
-        // try {
-        //     const client = req.body;
-        //     const todoTask = Todotask.build({
-        //         content: client.content,
-        //         date: moment().format("YYYY-MM-DD HH:mm:ss")
-        //     })
-        //     if (client.content) {
-        //         await todoTask.save();
-        //         console.table([{id: todoTask.id, content: todoTask.content, date: todoTask.date}])
-        //         res.redirect('/todo');
-        //     }
-        // } catch(err) {
-        //     res.redirect('/todo');
-        //     return err;
-        // }
-
-
         const client = req.body;
         if(client.content) {
             Todotask.create({
@@ -111,3 +93,22 @@ module.exports = {
     //     } catch(err) {
     //         return err;
     //     }
+
+
+    // build()와 save() 사용하는 방식!!
+    // write: (req, res) => {
+    // try {
+    //     const client = req.body;
+    //     const todoTask = Todotask.build({
+    //         content: client.content,
+    //         date: moment().format("YYYY-MM-DD HH:mm:ss")
+    //     })
+    //     if (client.content) {
+    //         await todoTask.save();
+    //         console.table([{id: todoTask.id, content: todoTask.content, date: todoTask.date}])
+    //         res.redirect('/todo');
+    //     }
+    // } catch(err) {
+    //     res.redirect('/todo');
+    //     return err;
+    // }
