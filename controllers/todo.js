@@ -6,7 +6,7 @@ var moment = require('moment-timezone');
 moment.tz.setDefault('Asia/Seoul');
 
 const output = {
-    // 메인, 목록
+    // 메인(목록)
     main: async (req, res) => {
         const tasks = await Todotask.findAll({
             attributes: ['id', 'content', 'date'],
