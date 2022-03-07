@@ -2,7 +2,7 @@
 @font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')} */
 
 body{
-	height: 70vh;
+	height: 100vh;
 	display: grid;
 	place-items: center;
 	place-content: center;

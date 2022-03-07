@@ -2,7 +2,7 @@
 @font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')} */
 
 body{
-	height: 100vh;
+	height: 110vh;
 	display: grid;
 	place-items: center;
 	place-content: center;
@@ -113,10 +113,10 @@ li{
     /* font-family: 'Nanum Gothic'; */
     display: inline;
     margin: 0px 8px 0px 5px;
-    width: 170px;
+    width: 130px;
     height: 28px;
     font-size: 15px;
-    border-color: transparent;
+    /* border-color: transparent; */
     /* border-radius: 5px; */
     outline: none;
     /* font-family: "NanumSquare_acR"; */
